@@ -1,0 +1,60 @@
+{
+  "main": [
+    {
+      "name": "Início",
+      "url": "/"
+    },
+    {
+      "name": "Serviços",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Consultar Protocolo",
+          "url": "/consultarprotocolo"
+        },
+        {
+          "name": "Formulário de Exclusão de Dados",
+          "url": "/exclusaoform"
+        }
+      ]
+    },
+    {
+      "name": "Sobre",
+      "url": "/about"
+    },
+    {
+      "name": "Contato",
+      "url": "/contact"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Início",
+      "url": "/"
+    },
+    {
+      "name": "Serviços",
+      "url": "",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Consultar Protocolo",
+          "url": "/consultarprotocolo"
+        },
+        {
+          "name": "Formulário de Exclusão de Dados",
+          "url": "/exclusaoform"
+        }
+      ]
+    },
+    {
+      "name": "Sobre",
+      "url": "/about"
+    },
+    {
+      "name": "Contato",
+      "url": "/contact"
+    }
+  ]
+}
