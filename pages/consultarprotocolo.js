@@ -7,7 +7,7 @@ const ConsultarProtocolo = () => {
   return (
     <Base>
       <div className="flex min-h-screen flex-col items-center justify-center">
-        <div className="rounded bg-white p-4 shadow-lg">
+        <div className="rounded p-4 shadow-lg">
           <h1 className="mt-6 text-left lg:text-[55px]">
             Consulta de processos administrativos
           </h1>

@@ -96,7 +96,7 @@ const Contato = () => {
               <input
                 className="btn btn-primary"
                 type="submit"
-                value="Send Now"
+                value="Enviar"
               />
             </form>
           </div>
