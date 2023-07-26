@@ -8,14 +8,14 @@ const About = ({ data }) => {
   const { title, image, education, experience } = frontmatter;
 
   return (
-    <section className="section">
+    <section className="section mt-16">
       <div className="container text-center">
         {image && (
           <div className="mb-8">
             <Image
               src={image}
-              width={1058}
-              height={300}
+              width={1298}
+              height={616}
               alt={title}
               className="rounded-lg"
               priority={true}

@@ -7,9 +7,9 @@ const Services = () => {
   return (
     <Base>
       <div className="py-12">
-        <div className="container">
+        <div className="container rounded border border-border p-6 dark:border-darkmode-border">
           <div className="grid grid-cols-1 gap-6">
-            <h2 className="">
+            <h2>
               FORMULÁRIO PARA EXERCÍCIO DOS DIREITOS DO TITULAR DOS DADOS
               PESSOAIS
             </h2>
