@@ -5,33 +5,12 @@
       "url": "/"
     },
     {
-      "name": "Serviços",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Consultar Protocolo",
-          "url": "/consultarprotocolo"
-        },
-        {
-          "name": "Formulário de Exclusão de Dados",
-          "url": "/exclusaoform"
-        }
-      ]
-    },
-    {
       "name": "Sobre",
       "url": "/sobre"
     },
     {
       "name": "Contato",
       "url": "/contato"
-    }
-  ],
-  "footer": [
-    {
-      "name": "Início",
-      "url": "/"
     },
     {
       "name": "Serviços",
@@ -47,6 +26,12 @@
           "url": "/exclusaoform"
         }
       ]
+    }
+  ],
+  "footer": [
+    {
+      "name": "Início",
+      "url": "/"
     },
     {
       "name": "Sobre",
