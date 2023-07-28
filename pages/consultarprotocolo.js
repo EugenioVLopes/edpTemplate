@@ -79,8 +79,9 @@ const ConsultarProtocolo = () => {
               className="input-field mr-2"
               aria-haspopup="listbox"
               aria-expanded="false"
+              defaultValue=""
             >
-              <option value="" disabled selected >
+              <option value="" disabled>
                 Tema
               </option>
               <option value="491">SISTEMA PROAD</option>
@@ -92,8 +93,9 @@ const ConsultarProtocolo = () => {
               className="input-field"
               aria-haspopup="listbox"
               aria-expanded="false"
+              defaultValue=""
             >
-              <option value="" disabled selected >
+              <option value="" disabled>
                 Assunto
               </option>
               <option value="2182">REQUERIMENTO USUÁRIO EXTERNO</option>
