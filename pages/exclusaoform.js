@@ -1,11 +1,104 @@
-import React from "react";
-import Link from "next/link";
 import Base from "@layouts/Baseof";
-import theme from "@config/theme.json";
+import React, { useState } from "react";
+import { useRouter } from 'next/router'
+import ReCAPTCHA from 'react-google-recaptcha';
+
 
 const Services = () => {
+  const [nomeCompleto, setNomeCompleto] = useState("");
+  const [email, setEmail] = useState("");
+  const [nomeSocial, setNomeSocial] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [dataNascimento, setDataNascimento] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [nomeCompletoTitularLegal, setNomeCompletoTitularLegal] = useState("");
+  const [emailTitularLegal, setEmailTitularLegal] = useState("");
+  const [nomeSocialTitularLegal, setNomeSocialTitularLegal] = useState("");
+  const [cpfTiularLegal, setCpfTiularLegal] = useState("");
+  const[dataNascimentoTitularLegal, setDataNascimentoTitularLegal] = useState("");
+  const [telefoneTitularLegal, setTelefoneTitularLegal] = useState("");
+  const [servico, setServico] = useState("");
+  const [estado, setEstado] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [documentos, setDocumentos] = useState("")
+  const [error, setError] = useState('');
+  const[estaEnviando,setEstaEnviando] = useState(false)
+  const router = useRouter()
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    setEstaEnviando(true);
+
+    handleRecaptchaChange = (value) => {
+      console.log("reCAPTCHA value:", value);
+      // Faça algo com o valor do reCAPTCHA (como validação)
+    }
+
+    handleForm();
+  };
+
+  const handleForm = async () => {
+    try {
+      const protocolo = {
+        nomeCompleto,
+        email,
+        nomeSocial,
+        cpf,
+        telefone,
+        nomeCompletoTitularLegal,
+        emailTitularLegal,
+        nomeSocialTitularLegal,
+        cpfTiularLegal,
+        dataNascimentoTitularLegal,
+        telefoneTitularLegal,
+        servico,
+        estado,
+        cidade,
+        documentos
+      };
+      
+      const response = await fetch('/api/formadd', {
+        method: 'POST',
+        body: JSON.stringify(protocolo),
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+      });
+
+      if (response.ok) {
+        router.push('/consultarprotocolo');
+        setEstaEnviando(false);
+        console.log("Enviado");
+        setEnviando(true);
+      } else {
+        throw new Error("Erro ao enviar formulário");
+      }
+    } catch (err) {
+      setError(err.message);
+    }
+
+    // Limpar os campos após o envio
+    setNomeCompleto("");
+    setEmail("");
+    setNomeSocial("");
+    setCpf("");
+    setDataNascimento("");
+    setTelefone("");
+    setNomeCompletoTitularLegal("");
+    setEmailTitularLegal("");
+    setNomeSocialTitularLegal("");
+    setCpfTiularLegal("");
+    setDataNascimentoTitularLegal("");
+    setTelefoneTitularLegal("");
+    setServico("");
+    setEstado("");
+    setCidade("");
+    setDocumentos("");
+  };
+
   return (
     <Base>
+    	<script src='https://www.google.com/recaptcha/api.js'></script>
+      <form onSubmit={handleSubmit}>
       <div className="py-12">
         <div className="container rounded border border-border p-6 dark:border-darkmode-border">
           <div className="grid grid-cols-1 gap-6">
@@ -47,6 +140,8 @@ const Services = () => {
                   type="text"
                   id="nomeCompleto"
                   name="nomeCompleto"
+                  required value={nomeCompleto}
+                  onChange={(e) => setNomeCompleto(e.target.value)}
                   placeholder="Digite o nome completo"
                   className="
                       mt-1
@@ -64,6 +159,8 @@ const Services = () => {
                   type="email"
                   id="email"
                   name="email"
+                  required value={email}
+                  onChange={({target}) => setEmail(target.value)}
                   placeholder="Digite seu email"
                   className="
                       mt-1
@@ -84,6 +181,8 @@ const Services = () => {
                   type="text"
                   id="nomeSocial"
                   name="nomeSocial"
+                  required value={nomeSocial}
+                  onChange={({target}) => setNomeSocial(target.value)}
                   placeholder="Digite o nome social"
                   className="mt-1
                         block
@@ -100,6 +199,8 @@ const Services = () => {
                   type="number"
                   id="cpf"
                   name="cpf"
+                  required value={cpf}
+                  onChange={({target}) => setCpf(target.value)}
                   placeholder="Digite seu CPF"
                   className="mt-1
                           block
@@ -118,6 +219,8 @@ const Services = () => {
                   type="date"
                   id="dataNascimento"
                   name="dataNascimento"
+                  required value={dataNascimento}
+                  onChange={({target}) => setDataNascimento(target.value)}
                   className="mt-1
                         block
                         w-11/12
@@ -133,6 +236,8 @@ const Services = () => {
                   type="tel"
                   id="telefone"
                   name="telefone"
+                  required value={telefone}
+                  onChange={({target}) => setTelefone(target.value)}
                   placeholder="Digite seu Telefone"
                   className="mt-1
                         block
@@ -156,6 +261,7 @@ const Services = () => {
                 type="text"
                 id="nomeCompletoTitularLegal"
                 name="nomeCompletoTitularLegal"
+                onChange={({target}) => setNomeCompletoTitularLegal(target.value)}
                 placeholder="Digite o nome completo"
                 className="mt-1
                       block
@@ -172,6 +278,7 @@ const Services = () => {
                 type="text"
                 id="emailTitularLegal"
                 name="emailTitularLegal"
+                onChange={({target}) => setEmailTitularLegal(target.value)}
                 placeholder="Digite seu email"
                 className="mt-1
                       block
@@ -190,6 +297,7 @@ const Services = () => {
                 type="text"
                 id="nomeSocialTitularLegal"
                 name="nomeSocialTitularLegal"
+                onChange={({target}) => setNomeSocialTitularLegal(target.value)}
                 placeholder="Digite o nome social"
                 className="mt-1
                       block
@@ -206,6 +314,7 @@ const Services = () => {
                 type="text"
                 id="cpfTiularLegal"
                 name="cpfTiularLegal"
+                onChange={({target}) => setCpfTiularLegal(target.value)}
                 placeholder="Digite seu CPF"
                 className="mt-1
                       block
@@ -226,6 +335,7 @@ const Services = () => {
                 type="date"
                 id="dataNascimentoTitularLegal"
                 name="dataNascimentoTitularLegal"
+                onChange={({target}) => setDataNascimentoTitularLegal(target.value)}
                 className="mt-1
                       block
                       w-11/12
@@ -241,6 +351,7 @@ const Services = () => {
                 type="tel"
                 id="telefoneTitularLegal"
                 name="telefoneTitularLegal"
+                onChange={({target}) => setTelefoneTitularLegal(target.value)}
                 placeholder="Digite seu Telefone"
                 className="mt-1
                         block
@@ -258,6 +369,7 @@ const Services = () => {
               type="checkbox"
               id="servico"
               name="servico"
+              onChange={({target}) => setServico(target.value)}
               className="mr-2"
             />
             <label htmlFor="servicoEliminarDados">
@@ -272,6 +384,7 @@ const Services = () => {
               <select
                 id="estado"
                 name="estado"
+                onChange={({target}) => setEstado(target.value)}
                 className="mt-1
                         block
                         w-11/12
@@ -317,6 +430,7 @@ const Services = () => {
               <select
                 id="cidade"
                 name="cidade"
+                onChange={({target}) => setCidade(target.value)}
                 className="mt-1
                         block
                         w-11/12
@@ -535,18 +649,31 @@ const Services = () => {
           </h5>
           <div className="mt-3">
             <label htmlFor="documentos">Documentos:</label>
-            <input type="file" id="documentos" name="documentos" />
+            <input type="file" id="documentos" name="documentos"  onChange={({target}) => setDocumentos(target.value)} />
           </div>
+          <ReCAPTCHA
+            sitekey="SUA_CHAVE_DO_SITE"
+            onChange={this.handleRecaptchaChange}
+          />
           <div className="mt-4 flex justify-center">
-            <button
+            {!estaEnviando && <button 
               type="submit"
               className="btn signup text-lg px-8 py-4 hover:bg-green-600 hover:text-white"
+              onClick={handleSubmit}
             >
               Enviar Formulário
-            </button>
+            </button>}
+            {estaEnviando && <button disabled
+              type="submit"
+              className="btn signup text-lg px-8 py-4 hover:bg-green-600 hover:text-white"
+              onClick={handleSubmit}
+            >
+              Enviando Formulário
+            </button>}
           </div>
         </div>
       </div>
+      </form>
     </Base>
   );
 };

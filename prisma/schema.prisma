@@ -1,0 +1,36 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Protocolo {
+  id                         Int      @id @default(autoincrement())
+  createdAt                  DateTime @default(now())
+  nomeCompleto               String
+  email                      String   @unique
+  cpf                        String
+  telefone                   String
+  nomeSocial                 String?
+  nomeCompletoTitularLegal   String?
+  emailTitularLegal          String?
+  nomeSocialTitularLegal     String?
+  cpfTiularLegal             String?
+  dataNascimentoTitularLegal String?
+  telefoneTitularLegal       String?
+  servico                    String
+  estado                     String
+  cidade                     String
+  documentos                 String?
+
+  @@map("Protocolos")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
