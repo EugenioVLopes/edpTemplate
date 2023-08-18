@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useRouter } from 'next/router'
 import ReCAPTCHA from 'react-google-recaptcha';
 
-
 const Services = () => {
   const [nomeCompleto, setNomeCompleto] = useState("");
   const [email, setEmail] = useState("");
@@ -28,12 +27,13 @@ const Services = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    setEstaEnviando(true);
 
     handleRecaptchaChange = (value) => {
       console.log("reCAPTCHA value:", value);
       // Faça algo com o valor do reCAPTCHA (como validação)
     }
+
+    setEstaEnviando(true);
 
     handleForm();
   };
@@ -651,10 +651,6 @@ const Services = () => {
             <label htmlFor="documentos">Documentos:</label>
             <input type="file" id="documentos" name="documentos"  onChange={({target}) => setDocumentos(target.value)} />
           </div>
-          <ReCAPTCHA
-            sitekey="SUA_CHAVE_DO_SITE"
-            onChange={this.handleRecaptchaChange}
-          />
           <div className="mt-4 flex justify-center">
             {!estaEnviando && <button 
               type="submit"
