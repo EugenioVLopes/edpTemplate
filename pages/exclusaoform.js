@@ -384,7 +384,6 @@ const Services = () => {
                 onChange={(target) => setServico(target.value)}
                 className="mr-2"
               >
-                <option value=""></option>
                 <option
                   value="Eliminação dos dados pessoais tratados com o consentimento, exceto
               nas hipóteses previstas no art. 16 da Lei."

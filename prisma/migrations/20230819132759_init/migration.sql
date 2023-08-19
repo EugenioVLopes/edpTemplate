@@ -16,7 +16,7 @@ CREATE TABLE "Protocolos" (
     "cpfTiularLegal" TEXT,
     "dataNascimentoTitularLegal" TEXT,
     "telefoneTitularLegal" TEXT,
-    "servico" BOOLEAN NOT NULL,
+    "servico" TEXT NOT NULL,
     "estado" TEXT NOT NULL,
     "cidade" TEXT NOT NULL,
     "documentos" TEXT,
