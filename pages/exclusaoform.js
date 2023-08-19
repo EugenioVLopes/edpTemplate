@@ -381,9 +381,10 @@ const Services = () => {
               <select
                 id="servico"
                 name="servico"
-                onChange={(target) => setServico(target.value)}
+                onChange={({ target }) => setServico(target.value)}
                 className="mr-2"
               >
+                <option value="">Selecione um serviço</option>
                 <option
                   value="Eliminação dos dados pessoais tratados com o consentimento, exceto
               nas hipóteses previstas no art. 16 da Lei."
