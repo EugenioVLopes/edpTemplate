@@ -1,9 +1,32 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Base from "@layouts/Baseof";
-import theme from "@config/theme.json";
 
 const ConsultarProtocolo = () => {
+  const [numeroDocumento, setNumeroDocumento] = useState("");
+  const [ano, setAno] = useState("");
+  const [protocoladoEmDe, setProtocoladoEmDe] = useState("");
+  const [protocoladoEmAte, setProtocoladoEmAte] = useState("");
+  const [tema, setTema] = useState("");
+  const [assunto, setAssunto] = useState("");
+  const router = useRouter();
+
+  const handleConsulta = () => {
+    const queryParams = new URLSearchParams({
+      numeroDocumento,
+      ano,
+      protocoladoEmDe,
+      protocoladoEmAte,
+      tema,
+      assunto,
+    });
+
+    const queryString = queryParams.toString();
+
+    // Redirecionar para a página de resultados com os parâmetros da consulta
+    router.push(`/resultados-consulta?${queryString}`);
+  };
+
   return (
     <Base>
       <div className="flex min-h-screen flex-col items-center justify-center">
@@ -104,7 +127,9 @@ const ConsultarProtocolo = () => {
 
           <div className="flex justify-end">
             <button className="btn-secondary mr-2">Limpar</button>
-            <button className="btn-primary">Consultar</button>
+            <button className="btn-primary" onClick={handleConsulta}>
+              Consultar
+            </button>
           </div>
         </div>
       </div>
