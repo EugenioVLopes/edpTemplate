@@ -48,8 +48,6 @@ const ConsultarProtocolo = () => {
               maxLength="9"
               inputMode="numeric"
               size="8"
-              aria-readonly="false"
-              aria-disabled="false"
             />
             <span className="mr-2">/</span>
             <input
@@ -62,8 +60,6 @@ const ConsultarProtocolo = () => {
               maxLength="4"
               inputMode="numeric"
               size="4"
-              aria-readonly="false"
-              aria-disabled="false"
             />
           </div>
 
@@ -77,8 +73,6 @@ const ConsultarProtocolo = () => {
               type="text"
               className="input-field mr-2"
               placeholder="De"
-              aria-readonly="false"
-              aria-disabled="false"
             />
             <span className="mr-2">/</span>
             <input
@@ -87,8 +81,6 @@ const ConsultarProtocolo = () => {
               type="text"
               className="input-field"
               placeholder="Até"
-              aria-readonly="false"
-              aria-disabled="false"
             />
           </div>
 
@@ -100,8 +92,6 @@ const ConsultarProtocolo = () => {
               id="temas"
               name="temas"
               className="input-field mr-2"
-              aria-haspopup="listbox"
-              aria-expanded="false"
               defaultValue=""
             >
               <option value="" disabled>
@@ -114,8 +104,6 @@ const ConsultarProtocolo = () => {
               id="assuntos"
               name="assuntos"
               className="input-field"
-              aria-haspopup="listbox"
-              aria-expanded="false"
               defaultValue=""
             >
               <option value="" disabled>
