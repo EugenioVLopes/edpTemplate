@@ -1,7 +1,6 @@
 import Base from "@layouts/Baseof";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const Services = () => {
   const [nomeCompleto, setNomeCompleto] = useState("");
@@ -93,7 +92,6 @@ const Services = () => {
 
   return (
     <Base>
-      <script src="https://www.google.com/recaptcha/api.js"></script>
       <form onSubmit={handleSubmit}>
         <div className="py-12">
           <div className="container rounded border border-border p-6 dark:border-darkmode-border">
