@@ -531,7 +531,7 @@ const Services = () => {
                   <option value="José da Penha">José da Penha</option>
                   <option value="Jucurutu">Jucurutu</option>
                   <option value="Jundiá">Jundiá</option>
-                  <option value="Lagoa d'Anta">Lagoa d'Anta</option>
+                  <option value="Lagoa dAnta">Lagoa dAnta</option>
                   <option value="Lagoa de Pedras">Lagoa de Pedras</option>
                   <option value="Lagoa de Velhos">Lagoa de Velhos</option>
                   <option value="Lagoa Nova">Lagoa Nova</option>
@@ -556,8 +556,8 @@ const Services = () => {
                   <option value="Natal">Natal</option>
                   <option value="Nísia Floresta">Nísia Floresta</option>
                   <option value="Nova Cruz">Nova Cruz</option>
-                  <option value="Olho-d'Água do Borges">
-                    Olho-d'Água do Borges
+                  <option value="Olho-dÁgua do Borges">
+                    Olho-dÁgua do Borges
                   </option>
                   <option value="Ouro Branco">Ouro Branco</option>
                   <option value="Paraná">Paraná</option>
