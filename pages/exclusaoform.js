@@ -212,11 +212,12 @@ const Services = () => {
               </div>
               <div className="mt-3 flex">
                 <div className="flex-1">
-                  <label htmlFor="dataNascimento">Data de Nascimento *</label>
+                  <label htmlFor="dataNascimento">Data de Nascimento*</label>
                   <input
                     type="date"
                     id="dataNascimento"
                     name="dataNascimento"
+                    placeholder="dd / mm / aa"
                     required
                     value={dataNascimento}
                     onChange={({ target }) => setDataNascimento(target.value)}
@@ -335,12 +336,13 @@ const Services = () => {
             <div className="mt-3 flex">
               <div className="flex-1">
                 <label htmlFor="dataNascimentoTitularLegal">
-                  Data de Nascimento *
+                  Data de Nascimento*
                 </label>
                 <input
                   type="date"
                   id="dataNascimentoTitularLegal"
                   name="dataNascimentoTitularLegal"
+                  placeholder="dd / mm / aa"
                   onChange={({ target }) =>
                     setDataNascimentoTitularLegal(target.value)
                   }
@@ -381,7 +383,13 @@ const Services = () => {
                 id="servico"
                 name="servico"
                 onChange={({ target }) => setServico(target.value)}
-                className="mr-2"
+                className="mt-1
+                block
+                w-11/12
+                rounded-md
+                border-gray-300
+                shadow-sm
+                focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               >
                 <option value="">Selecione um serviço</option>
                 <option
