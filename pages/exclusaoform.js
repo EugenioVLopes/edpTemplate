@@ -108,24 +108,6 @@ const Services = () => {
               </h4>
             </div>
             <div className="mt-3">
-              <h5 className="text-justify">
-                ATENÇÃO – De acordo com o texto do artigo 11, II da LGPD, o
-                Tribunal Regional do Trabalho da 21ª Região, possui o direito de
-                tratar os dados pessoais sensíveis, sem a necessidade de
-                fornecimento de consentimento de seu titular, pois está
-                respaldado em função de sua atividade fim, legitimada no
-                exercício regular de direitos, entre estes o contrato e o
-                processo judicial, administrativo e arbitral. Também, o
-                Tribunal, na mesma condição, poderá tratar dados pessoais
-                sensíveis, quando se tratar de obrigação legal ou regulatória de
-                seu controlador; nos casos de proteção da vida ou da
-                incolumidade física do titular ou de terceiros; quando for para
-                garantir e prevenir fraude e a segurança do titular; nos
-                processos de identificação e autenticação de cadastro em
-                sistemas eletrônicos; entre outros casos previstos na Lei.
-              </h5>
-            </div>
-            <div className="mt-3">
               <h3>1. Campos obrigatórios para o Titular dos Dados:</h3>
               <div className="mt-3 flex">
                 <div className="flex-1">

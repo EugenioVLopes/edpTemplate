@@ -23,7 +23,7 @@ const Sobre = () => {
             <div className="rounded border border-border p-6 dark:border-darkmode-border ">
               <h1 className="h1 text-left lg:text-[55px]">Sobre nós</h1>
                   <p className="text-justify mb-5 text-lg font-400 text-dark dark:text-darkmode-light">
-                    Na EDP Officer, entendemos os desafios que a sua empresa
+                    Na edpOfficer, entendemos os desafios que a sua empresa
                     enfrenta para se manter em conformidade com as rigorosas
                     exigências legais da LGPD. É por isso que estamos aqui para
                     simplificar esse processo para você. Nossa missão é ajudá-lo
@@ -46,7 +46,7 @@ const Sobre = () => {
                     empresa até a elaboração de políticas sob medida, oferecemos
                     soluções abrangentes que asseguram a conformidade contínua e
                     a tranquilidade de saber que seus dados estão em mãos
-                    seguras. Confie na EDP Officer para lidar com a complexidade
+                    seguras. Confie na edpOfficer para lidar com a complexidade
                     da LGPD, enquanto você se concentra no que faz de melhor:
                     fazer o seu negócio prosperar. Entre em contato conosco hoje
                     mesmo e descubra como podemos ajudá-lo a garantir a proteção

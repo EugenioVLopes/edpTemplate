@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Base from "@layouts/Baseof";
-import theme from "@config/theme.json";
 import Image from "next/image"; 
 import { BsArrowRightShort } from "react-icons/bs";
 import { FaEnvelope, FaMapMarkerAlt, FaUserAlt } from "react-icons/fa";
