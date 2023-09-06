@@ -42,10 +42,10 @@ const Home = ({
               }
             >
               <div className="banner-title">
-                <h1 className="flex">
-                  <h1 className="text-emerald-500">edp</h1>
+                <div className="flex">
+                  <h1 className="text-emerald-500 dark:text-emerald-500">edp</h1>
                   <h1>Officer !</h1>
-                </h1>
+                </div>
                 {markdownify(banner.title_small, "span")}
               </div>
               {markdownify(banner.content, "p", "mt-4")}
