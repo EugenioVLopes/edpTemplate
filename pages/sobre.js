@@ -36,7 +36,7 @@ const Sobre = () => {
                     proteção de dados. O que nos destaca é o nosso compromisso
                     em entender a singularidade da sua empresa. Não acreditamos
                     em soluções genéricas, pois sabemos que cada negócio possui
-                    necessidades específicas. Ao escolher a EDP Officer, você
+                    necessidades específicas. Ao escolher a edpOfficer, você
                     terá um atendimento personalizado, orientado para as suas
                     demandas e o tamanho do seu empreendimento. Nossa abordagem
                     é transparente, e trabalhamos em estreita colaboração com
