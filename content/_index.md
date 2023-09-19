@@ -2,7 +2,7 @@
 banner:
   title: EdpOfficer **!**
   title_small: "LGPD - Lei Geral de Proteção de Dados Pessoais - Lei 13.709/2018"
-  content: "Nesta página você encontra as principais informações relacionadas à Lei Geral de Proteção de Dados no âmbito do Tribunal Regional do Trabalho da 21ª Região."
+  content: "Nesta página você encontra as principais informações relacionadas à Lei Geral de Proteção de Dados."
   image_enable: true
   image: /images/indeximage.svg
   button:

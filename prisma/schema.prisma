@@ -14,6 +14,7 @@ model Protocolo {
   nomeCompleto               String
   email                      String   @unique
   cpf                        String
+  dataNascimento             String
   telefone                   String
   nomeSocial                 String?
   nomeCompletoTitularLegal   String?

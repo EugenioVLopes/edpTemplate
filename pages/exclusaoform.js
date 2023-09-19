@@ -28,10 +28,11 @@ const Services = () => {
     event.preventDefault();
 
     setEstaEnviando(true);
+    const dataNascimentoISO = new Date(dataNascimento).toISOString();
 
     handleForm();
   };
-
+  
   const handleForm = async () => {
     try {
       const protocolo = {
@@ -39,6 +40,7 @@ const Services = () => {
         email,
         nomeSocial,
         cpf,
+        dataNascimento: dataNascimentoISO,
         telefone,
         nomeCompletoTitularLegal,
         emailTitularLegal,
